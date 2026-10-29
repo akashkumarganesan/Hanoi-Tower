@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tower of Hanoi</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>🏯 Tower of Hanoi</h1>
+
+    <div class="controls">
+
+        <label for="diskInput">
+            Number of Disks:
+        </label>
+
+        <input
+            type="number"
+            id="diskInput"
+            min="1"
+            max="7"
+            value="4"
+        >
+
+        <button onclick="startGame()">
+            Start Game
+        </button>
+
+    </div>
+
+    <div id="moves">
+        Moves: 0
+    </div>
+
+    <div id="message">
+        Select a tower to start
+    </div>
+
+
+    <div class="game">
+
+        <div class="tower-container">
+
+            <h2>Tower A</h2>
+
+            <div
+                class="tower"
+                id="tower0"
+                onclick="towerClick(0)">
+            </div>
+
+        </div>
+
+
+        <div class="tower-container">
+
+            <h2>Tower B</h2>
+
+            <div
+                class="tower"
+                id="tower1"
+                onclick="towerClick(1)">
+            </div>
+
+        </div>
+
+
+        <div class="tower-container">
+
+            <h2>Tower C</h2>
+
+            <div
+                class="tower"
+                id="tower2"
+                onclick="towerClick(2)">
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

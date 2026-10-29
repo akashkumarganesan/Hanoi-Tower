@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111827;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 25px;
+    color: #38bdf8;
+}
+
+.controls {
+    margin: 20px;
+}
+
+label {
+    font-size: 18px;
+}
+
+input {
+    width: 80px;
+    padding: 10px;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    border: none;
+    border-radius: 6px;
+}
+
+button {
+    padding: 10px 20px;
+
+    margin-left: 10px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: #22c55e;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #16a34a;
+}
+
+#moves {
+    font-size: 20px;
+    margin: 15px;
+}
+
+#message {
+    font-size: 22px;
+    font-weight: bold;
+
+    color: #facc15;
+
+    margin: 15px;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+
+    gap: 50px;
+
+    margin-top: 40px;
+}
+
+.tower-container {
+    width: 220px;
+}
+
+.tower-container h2 {
+    color: #94a3b8;
+}
+
+.tower {
+    width: 220px;
+    height: 300px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    padding-bottom: 12px;
+
+    border-bottom: 12px solid #64748b;
+
+    cursor: pointer;
+}
+
+/* Tower Pole */
+
+.tower::before {
+    content: "";
+
+    position: absolute;
+
+    width: 10px;
+    height: 260px;
+
+    background: #64748b;
+
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 0;
+}
+
+
+/* Disks */
+
+.disk {
+    height: 35px;
+
+    margin: 2px 0;
+
+    border-radius: 8px;
+
+    z-index: 2;
+
+    transition: 0.2s;
+}
+
+.disk:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Disk Sizes */
+
+.disk1 {
+    width: 60px;
+    background: #ef4444;
+}
+
+.disk2 {
+    width: 85px;
+    background: #f97316;
+}
+
+.disk3 {
+    width: 110px;
+    background: #eab308;
+}
+
+.disk4 {
+    width: 135px;
+    background: #22c55e;
+}
+
+.disk5 {
+    width: 160px;
+    background: #3b82f6;
+}
+
+.disk6 {
+    width: 185px;
+    background: #a855f7;
+}
+.disk7 {
+    width: 210px;
+    background: #ec4899;
+}
+
+
+@media (max-width: 800px) {
+
+    .game {
+        gap: 10px;
+    }
+
+    .tower-container {
+        width: 30%;
+    }
+
+    .tower {
+        width: 100%;
+    }
+
+    .disk1 {
+        width: 30%;
+    }
+
+    .disk2 {
+        width: 42%;
+    }
+
+    .disk3 {
+        width: 54%;
+    }
+
+    .disk4 {
+        width: 66%;
+    }
+
+    .disk5 {
+        width: 78%;
+    }
+
+    .disk6 {
+        width: 90%;
+    }
+}
